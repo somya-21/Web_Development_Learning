@@ -1,0 +1,23 @@
+// how to take input rfrom user
+// npm install prompt-sync
+// const prompt = require("prompt-sync")();
+
+// let n = Number(prompt("Enter a number: "));
+
+// console.log("You entered:", n);
+
+// npm install readline-sync
+
+// Code:
+
+// const readlineSync = require("readline-sync");
+
+// let n = readlineSync.questionInt("Enter a number: ");
+
+// console.log("You entered:", n);
+
+// process.stdin.on("data", (input) => {
+//     let n = Number(input.toString().trim());
+//     console.log("You entered:", n);
+//     process.exit();
+// });
