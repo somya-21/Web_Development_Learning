@@ -1,0 +1,10 @@
+// 1.npm init
+// 2.npm i express mongo db
+// change in Packagejson
+// create Server
+// mongodb+srv://demo:<demo>@cluster0.bib29cp.mongodb.net/?appName=Cluster0
+// create dbfile and 1.(create client connection) 2.connect the client 3.create database and retur value
+// client = new MongoClient(url);
+//t client.connect();
+//db = client.db("Demo Database");
+//return db
