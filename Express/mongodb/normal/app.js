@@ -21,26 +21,3 @@
 
 // app.listen(3000,console.log("Server runing "))
 
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
-
-const app = express();
-
-app.use(cors());
-app.use(express.json());
-
-// MongoDB Connection
-mongoose
-  .connect("mongodb+srv://demo:demo@cluster0.bib29cp.mongodb.net/?appName=Cluster0")
-  .then(() => console.log("MongoDB Connected"))
-  .catch((err) => console.log(err));
-
-// API
-app.get("/", (req, res) => {
-  res.send("Server Running");
-});
-
-app.listen(5000, () => {
-  console.log("Server Started");
-});
