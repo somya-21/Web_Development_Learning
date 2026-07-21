@@ -1,9 +1,15 @@
 const express=require('express')
 const app=express()
+
 const fs = require("fs");
 let users=require("./task.json")
+
+
 app.use(express.json());  
 app.use(express.urlencoded({ extended: true }));
+
+
+
 // get all data
 app.get("/",(req,res)=>
 {
@@ -29,14 +35,26 @@ app.get("/users",(req,res)=>
     res.send(html)
 })
 
+
+
 // app.get("/api/users",(req,res)=>
+
+
+
+
 // {
     
 // res.json(users)
 // })
 
 
-// . Using Route Parameter (Recommended)
+
+
+// . 
+// 
+// 
+// 
+// Using Route Parameter (Recommended)
 app.get("/api/users/:id",(req,res)=>
 {
     const id=Number(req.params.id);
@@ -63,7 +81,7 @@ app.post("/api/users", (req, res) => {
 
         if (data) {
             users = JSON.parse(data);
-        }
+        }                                                                                                                                                                                    
     }
 const existingUser = users.find(
     user => user.email === req.body.email
@@ -77,7 +95,7 @@ if (existingUser) {
     users.push(newUser);
     // Save data into file
     fs.writeFileSync(
-        "task.json",
+        "task.json", 
        JSON.stringify(users, null, 2)
     );
 
